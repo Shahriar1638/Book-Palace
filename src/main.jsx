@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './index.css'
+import './input.css'
 import routes from './Routes/routes';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
