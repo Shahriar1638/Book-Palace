@@ -6,7 +6,9 @@ const GeneralUserLayout = () => {
     return (
         <div>
             <Navbar />
-            <Outlet />
+            <div className="h-screen mx-60">
+                <Outlet />
+            </div>
             <Footer />
         </div>
     );
