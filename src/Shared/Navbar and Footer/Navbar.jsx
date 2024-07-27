@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, Navigate, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const [ user, setUser ] = useState("Guest");
@@ -23,7 +24,7 @@ const Navbar = () => {
             <div>
                 {
                     user === "Guest" ? 
-                    <button>Login</button> : 
+                    <button><Link to={"/login"}>Login</Link></button> : 
                     <div><h1 className="mr-4">{user}</h1><button>Logout</button></div>
                 }
             </div>
