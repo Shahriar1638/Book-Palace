@@ -1,0 +1,78 @@
+[
+    {
+        "bookId": "1",
+        "bookImage": "https://example.com/images/book1.jpg",
+        "bookTitle": "Dune",
+        "author": "Frank Herbert",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": ["Science Fiction", "Adventure"],
+        "rating": 4.8,
+        "price": 9.99,
+        "recommend": 120,
+        "purchaseCount": 2500,
+        "reviews": [
+          {
+            "userId": "user1",
+            "userName": "Alice",
+            "comment": "Amazing book!",
+            "date": "2023-01-15"
+          },
+          {
+            "userId": "user2",
+            "userName": "Bob",
+            "comment": "A must-read for sci-fi fans.",
+            "date": "2023-02-10"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "user3",
+            "userName": "Charlie",
+            "comment": "Found some typos in the text.",
+            "date": "2023-03-05"
+          }
+        ]
+      },
+      {
+        "bookId": "2",
+        "bookImage": "https://example.com/images/book2.jpg",
+        "bookTitle": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "ISBN": "978-0590353427",
+        "publishYear": 1997,
+        "genre": ["Fantasy", "Adventure"],
+        "rating": 4.5,
+        "price": 7.99,
+        "recommend": 150,
+        "purchaseCount": 5000,
+        "reviews": [
+          {
+            "userId": "user4",
+            "userName": "David",
+            "comment": "A great start to the series!",
+            "date": "2023-01-20"
+          },
+          {
+            "userId": "user5",
+            "userName": "Eve",
+            "comment": "Magical and captivating.",
+            "date": "2023-02-15"
+          }
+        ],
+        "reports": [
+            {
+                "userId": "user6",
+                "userName": "Frank",
+                "comment": "Some pages were missing.",
+                "date": "2023-03-10"
+            },
+            {
+                "userId": "user7",
+                "userName": "Grace",
+                "comment": "The cover was torn.",
+                "date": "2023-03-15"
+            }
+        ]
+      }  
+]

@@ -1,7 +1,10 @@
-const Maintitle = ({headerText="default"}) => {
+/* eslint-disable react/prop-types */
+const Maintitle = ({maintitle}) => {
+
+    
     return (
         <div>
-            <h1>{text}</h1>
+            <h1>{maintitle}</h1>
         </div>
     );
 };
