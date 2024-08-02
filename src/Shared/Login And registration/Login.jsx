@@ -18,7 +18,6 @@ const Login = () => {
             const res = await axios.post('http://localhost:3000/adduser', userinfo);
             console.log(res);
             if (res.status === 200) {
-                console.log('User added successfully');
                 navigate('/');
             }
         } catch (err) {
