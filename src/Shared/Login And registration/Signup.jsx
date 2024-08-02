@@ -32,7 +32,10 @@ const Signup = () => {
                     displayName: name,
                     photoURL: profileimg
                 })
-                swal("SuccessFully Registered", "Your registration is done. Logging In.", "success");
+                swal("SuccessFully Registered", "Your registration is done. Logging In.", "success")
+                    .then(() => {
+                        navigate('/login');
+                    });
             })
             .catch(error => {
                 console.error(error);
@@ -64,7 +67,7 @@ const Signup = () => {
         googleSignIn()
         .then(result => {
             console.log(result.user);
-            navigate('/home');
+            navigate('/');
         })
         .catch(error => {
             console.error(error);
@@ -80,7 +83,7 @@ const Signup = () => {
                         <input type="text" placeholder="Your name" name="name" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md px-6 py-3" />
                         <input type="text" placeholder="Your profile photo url" name="profileimg" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" />
                         <input type="text" placeholder="Your cover photo url" name="coverimg" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" />
-                        <input type="text" placeholder="Your email" name="email" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" />
+                        <input type="email" placeholder="Your email" name="email" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" />
                         <input onChange={handlePasswordOnChange} type="password" placeholder="Your password" name="password" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" />
                         {
                             (error==="Password must be at least 6 characters long.") && <p className="text-red-500 text-center mt-4">{error}</p>

@@ -1,31 +1,29 @@
-import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Authentication/Authprovider/Authprovider";
 
 const Login = () => {
     const [error , setError] = useState('');
     const navigate = useNavigate();
+    const { logInUser } = useContext(AuthContext);
 
-    const handleLogin = async (e) => {
-        e.preventDefault()
-        setError('');
+    const handleLogin = (e) => {
+        e.preventDefault();
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
-        const userinfo = { email, password };
-        console.log(userinfo);
-        try {
-            const res = await axios.post('http://localhost:3000/adduser', userinfo);
-            console.log(res);
-            if (res.status === 200) {
-                navigate('/');
-            }
-        } catch (err) {
-            if (err.response?.status === 400) {
-                return setError('User already exists. Please try logging in.');
-            } 
-        }
-    };
+        logInUser(email, password)
+        .then(result => {
+            console.log(result);
+            navigate('/');
+        })
+        .catch(error => {
+            console.error(error);
+            setError('Invalid email or password');
+        });
+    }
+
+    
     return (
         <div className="grid grid-cols-7">
             <div className="col-span-5 h-screen bg-purple-500">
