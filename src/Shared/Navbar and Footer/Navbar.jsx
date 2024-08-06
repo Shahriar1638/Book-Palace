@@ -1,9 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, Navigate, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Authentication/Authprovider/Authprovider";
 
 const Navbar = () => {
-    const [ user, setUser ] = useState("Guest");
+    const { user, logOutUser } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOutUser();
+    }
     const Options = 
     <>
         <li className="uppercase"><NavLink to="/" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Home</NavLink></li>
@@ -23,9 +27,12 @@ const Navbar = () => {
             </div>
             <div>
                 {
-                    user === "Guest" ? 
-                    <button><Link to={"/login"}>Login</Link></button> : 
-                    <div><h1 className="mr-4">{user}</h1><button>Logout</button></div>
+                    user ? 
+                    <div className="flex items-center">
+                        <h1 className="mr-4">{user.displayName}</h1>
+                        <button onClick={handleLogOut}>Logout</button>
+                    </div> 
+                    : <button><Link to={"/login"}>Login</Link></button> 
                 }
             </div>
         </nav>

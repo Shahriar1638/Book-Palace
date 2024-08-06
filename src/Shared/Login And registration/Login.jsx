@@ -13,14 +13,14 @@ const Login = () => {
         const email = form.get('email');
         const password = form.get('password');
         logInUser(email, password)
-        .then(result => {
-            console.log(result);
-            navigate('/');
-        })
-        .catch(error => {
-            console.error(error);
-            setError('Invalid email or password');
-        });
+            .then(result => {
+                console.log(result);
+                navigate('/');
+            })
+            .catch(error => {
+                console.error(error);
+                setError('Invalid email or password');
+            });
     }
 
     

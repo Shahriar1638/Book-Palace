@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, deleteUser, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/firebase.init";
 
@@ -14,6 +14,11 @@ const Authprovider = ({children}) => {
     const createUser = (email , password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
+    }
+
+    const removeUser = () => {
+        setLoading(true);
+        return deleteUser(auth.currentUser);
     }
 
     const logInUser = (email, password) => {
@@ -32,14 +37,15 @@ const Authprovider = ({children}) => {
     }
 
     useEffect(() => {
-        const subscribe = onAuthStateChanged(auth, currentUser => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            console.log("Currently logged in user infos: ",currentUser);
             setUser(currentUser);
             setLoading(false);
         }, error => {
             setErrorMessage(error.message);
             setLoading(false);
         });
-        return () => subscribe();
+        return () => unsubscribe();
     }, []);
     
 
@@ -50,7 +56,8 @@ const Authprovider = ({children}) => {
         logInUser,
         logOutUser,
         googleSignIn,
-        errorMessage 
+        errorMessage,
+        removeUser 
     }
 
     return (

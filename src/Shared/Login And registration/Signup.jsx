@@ -10,11 +10,11 @@ const Signup = () => {
     const [ checkPassword, setCheckPassword ] = useState('');
     const [ confirmPassword, setConfirmPassword ] = useState('');
     const [error , setError] = useState(null);
-    const { createUser, googleSignIn } = useContext(AuthContext);
+    const { createUser, googleSignIn,removeUser } = useContext(AuthContext);
     const navigate = useNavigate();
     
 
-    const handleSignup = (e) => {
+    const handleSignup = async (e) => {
         e.preventDefault()
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
@@ -22,26 +22,70 @@ const Signup = () => {
         const name = form.get('name');
         const profileimg = form.get('profileimg');
         const coverimg = form.get('coverimg');
-        if (password.length < 6) {
-            return setError('Password must be at least 6 characters long.');
-        } else {
-            createUser(email, password)
-            .then(result => {
-                console.log(result.user)             
-                updateProfile(result.user, {
-                    displayName: name,
-                    photoURL: profileimg
-                })
+        const role = form.get('role');
+
+        const userinfo = {
+            name: name,
+            email: email,
+            profileimg: profileimg,
+            coverimg: coverimg,
+            postIds: [],
+            bookCollections : [],
+            favourites: [],
+            role,
+            loyaltyPoints: 0,
+            subscriptionEndDate: ''
+        }
+        try {
+            const result = await createUser(email, password);
+            await updateProfile(result.user, {
+                displayName: name,
+                photoURL: profileimg
+            });
+            try {
+                await axios.post('http://localhost:3000/adduser', userinfo);
                 swal("SuccessFully Registered", "Your registration is done. Logging In.", "success")
                     .then(() => {
                         navigate('/login');
                     });
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error(error);
-                swal("Ooops...!", "Account already exist", "error");
-            })
+                await removeUser(result.user);
+                swal("Ooops...!", "Something went wrong pls register again", "error");
+            }
+        } catch (error) {
+            console.error(error);
+            swal("Ooops...!", "Account already exist", "error");
         }
+
+        //----------------> Code blow is the same as the code above <----------------
+
+        // createUser(email, password)
+        //     .then(result =>  {
+        //         console.log(result.user)             
+        //         updateProfile(result.user, {
+        //             displayName: name,
+        //             photoURL: profileimg
+        //         })
+        //         axios.post('http://localhost:3000/adduser', userinfo)
+        //             .then(response => {
+        //                 console.log(response);
+        //                 swal("SuccessFully Registered", "Your registration is done. Logging In.", "success")
+        //                     .then(() => {
+        //                     navigate('/login');
+        //                     });
+        //             })
+        //             .catch(error => {
+        //                 console.error(error);
+        //                 removeUser(result.user);
+        //             });
+        //     })
+        //     .catch(error => {
+        //         console.error(error);
+        //         swal("Ooops...!", "Account already exist", "error");
+        //     })
+
+        //----------------> Above Code endes here <----------------
     };
     const handlePasswordOnChange = (e) => {
         setCheckPassword(e.target.value);
@@ -65,13 +109,13 @@ const Signup = () => {
 
     const handleGoogleSignIn = () => {
         googleSignIn()
-        .then(result => {
-            console.log(result.user);
-            navigate('/');
-        })
-        .catch(error => {
-            console.error(error);
-        })
+            .then(result => {
+                console.log(result.user);
+                navigate('/');
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
 
     return (
@@ -80,15 +124,20 @@ const Signup = () => {
                 <div className="flex flex-col items-start justify-center h-full">
                     <h1 className="text-4xl font-bold">Create to your account</h1>
                     <form onSubmit={handleSignup} className="flex flex-col mt-10 w-[46rem]">
-                        <input type="text" placeholder="Your name" name="name" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md px-6 py-3" />
-                        <input type="text" placeholder="Your profile photo url" name="profileimg" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" />
+                        <input type="text" placeholder="Your name" name="name" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md px-6 py-3" required/>
+                        <select name="role" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" required>
+                            <option value="">You are a ..</option>
+                            <option value="generalUser">Reader</option>
+                            <option value="author">Writer</option>
+                        </select>
+                        <input type="text" placeholder="Your profile photo url" name="profileimg" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" required/>
                         <input type="text" placeholder="Your cover photo url" name="coverimg" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" />
-                        <input type="email" placeholder="Your email" name="email" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" />
-                        <input onChange={handlePasswordOnChange} type="password" placeholder="Your password" name="password" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" />
+                        <input type="email" placeholder="Your email" name="email" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" required/>
+                        <input onChange={handlePasswordOnChange} type="password" placeholder="Your password" name="password" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" required/>
                         {
                             (error==="Password must be at least 6 characters long.") && <p className="text-red-500 text-center mt-4">{error}</p>
                         }
-                        <input onChange={handlePasswordConfirm} type="password" placeholder="Confirm your password" name="confimPassword" className="border-b-[1px] border-solid shadow-lg border-gray-400 mt-4 rounded-md px-6 py-3" />
+                        <input onChange={handlePasswordConfirm} type="password" placeholder="Confirm your password" name="confimPassword" className="border-b-[1px] border-solid shadow-lg border-gray-400 mt-4 rounded-md px-6 py-3" required/>
                         {
                             (error==='Password does not match') && <p className="text-red-500 text-center mt-4">{error}</p>
                         }
