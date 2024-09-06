@@ -40,7 +40,8 @@ const Signup = () => {
             const result = await createUser(email, password);
             await updateProfile(result.user, {
                 displayName: name,
-                photoURL: profileimg
+                photoURL: profileimg,
+                role: role
             });
             try {
                 await axios.post('http://localhost:3000/adduser', userinfo);
@@ -57,35 +58,6 @@ const Signup = () => {
             console.error(error);
             swal("Ooops...!", "Account already exist", "error");
         }
-
-        //----------------> Code blow is the same as the code above <----------------
-
-        // createUser(email, password)
-        //     .then(result =>  {
-        //         console.log(result.user)             
-        //         updateProfile(result.user, {
-        //             displayName: name,
-        //             photoURL: profileimg
-        //         })
-        //         axios.post('http://localhost:3000/adduser', userinfo)
-        //             .then(response => {
-        //                 console.log(response);
-        //                 swal("SuccessFully Registered", "Your registration is done. Logging In.", "success")
-        //                     .then(() => {
-        //                     navigate('/login');
-        //                     });
-        //             })
-        //             .catch(error => {
-        //                 console.error(error);
-        //                 removeUser(result.user);
-        //             });
-        //     })
-        //     .catch(error => {
-        //         console.error(error);
-        //         swal("Ooops...!", "Account already exist", "error");
-        //     })
-
-        //----------------> Above Code endes here <----------------
     };
     const handlePasswordOnChange = (e) => {
         setCheckPassword(e.target.value);
@@ -110,8 +82,26 @@ const Signup = () => {
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
-                console.log(result.user);
-                navigate('/');
+                const userInfo = {
+                    email: result.user?.email,
+                    name: result.user?.displayName,
+                    role: 'generalUser',
+                    profileimg: result.user?.photoURL,
+                    coverimg: '',
+                    postIds: [],
+                    bookCollections: [],
+                    favourites: [],
+                    loyaltyPoints: 0,
+                    subscriptionEndDate: ''
+                }
+                axios.post('http://localhost:3000/adduser', userInfo)
+                    .then(res => {
+                        if (res.status === 200) {
+                            console.log("User added successfully");
+                            swal("SuccessFully Registered", "Your registration is done. Logging In.", "success")
+                            navigate('/');
+                        }
+                    })
             })
             .catch(error => {
                 console.error(error);
@@ -147,9 +137,9 @@ const Signup = () => {
                     <div className="mt-4">
                         <h1>Already have an account ? then,<span className="text-blue-500 underline uppercase"> <Link to={"/login"}> log in</Link></span></h1>
                     </div>
-                    <div>
+                    {/* <div>
                         <button onClick={handleGoogleSignIn} className="bg-blue-500 text-white p-2 rounded-md mt-4">Sign up with Google</button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="col-span-2 h-screen bg-purple-500">

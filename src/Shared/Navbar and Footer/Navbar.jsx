@@ -1,11 +1,19 @@
 /* eslint-disable no-unused-vars */
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, Navigate, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Authentication/Authprovider/Authprovider";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
     const { user, logOutUser } = useContext(AuthContext);
+    const [role, setRole] = useState('');
+
+    useEffect(() => {
+        if(user) {
+            setRole(user.role);
+        }
+    }, [user]);
+
     const handleLogOut = () => {
         logOutUser();
     }
@@ -14,7 +22,9 @@ const Navbar = () => {
         <li className="uppercase"><NavLink to="/" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Home</NavLink></li>
         <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Books Collection</NavLink></li>
         <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Community Forums</NavLink></li>
-        <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Cart</NavLink></li>
+        { role !== 'admin' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Cart</NavLink></li> }
+        { role === 'admin' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Dashboard</NavLink></li> }
+        { role === 'author' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Publish a Book</NavLink></li> }
         
         {/* <li className="uppercase"><NavLink to="/openai" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Open Ai(temporary)</NavLink></li> */}
     </>
