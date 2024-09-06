@@ -32,7 +32,7 @@ const Signup = () => {
             postIds: [],
             bookCollections : [],
             favourites: [],
-            role,
+            role: role,
             loyaltyPoints: 0,
             subscriptionEndDate: ''
         }

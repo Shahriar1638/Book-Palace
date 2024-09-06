@@ -2,6 +2,7 @@
 import { useContext, useState } from "react";
 import { Link, Navigate, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Authentication/Authprovider/Authprovider";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
     const { user, logOutUser } = useContext(AuthContext);
@@ -12,13 +13,15 @@ const Navbar = () => {
     <>
         <li className="uppercase"><NavLink to="/" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Home</NavLink></li>
         <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Books Collection</NavLink></li>
-        <li className="uppercase"><NavLink to="/community" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>community</NavLink></li>
+        <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Community Forums</NavLink></li>
+        <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Cart</NavLink></li>
+        
+        {/* <li className="uppercase"><NavLink to="/openai" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Open Ai(temporary)</NavLink></li> */}
     </>
     return (
         <nav className="h-24 flex flex-row items-center justify-between px-10 border border-solid border-black">
             <div className="flex flex-row items-center">
-                <img className="mr-4 text-2xl font-bold" src="" alt="" />
-                <h1>Book Palace</h1>
+                <img className="h-32" src={logo} alt="" />
             </div>
             <div>
                 <ul className="flex gap-8 items-center text-xl">

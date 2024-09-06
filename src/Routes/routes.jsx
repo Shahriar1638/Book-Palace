@@ -4,6 +4,7 @@ import Errorpage from "../Errorpage/Errorpage";
 import GeneralUserLayout from "../Layout/GeneralUserLayout";
 import Login from "../Shared/Login And registration/Login";
 import Signup from "../Shared/Login And registration/Signup";
+// import Openai from "../Pages/TempAI/Openai";
 
 const routes = createBrowserRouter([
     {
@@ -14,7 +15,12 @@ const routes = createBrowserRouter([
         {
           path: "/",
           element: <Home></Home>,
-        }
+        },
+        
+        // {
+        //   path: "/openai",
+        //   element: <Openai></Openai>,
+        // }
       ],
     },
     {
