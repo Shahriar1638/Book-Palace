@@ -3,13 +3,13 @@
         "bookId": "1",
         "bookImage": "https://example.com/images/book1.jpg",
         "bookTitle": "Dune",
-        "author": "Frank Herbert",
+        "authorName": "Frank Herbert",
         "ISBN": "978-0441172719",
         "publishYear": 1965,
         "genre": ["Science Fiction", "Adventure"],
         "rating": 4.8,
         "price": 9.99,
-        "recommend": 120,
+        "recommend": [],
         "purchaseCount": 2500,
         "reviews": [
           {
@@ -38,13 +38,13 @@
         "bookId": "2",
         "bookImage": "https://example.com/images/book2.jpg",
         "bookTitle": "Harry Potter and the Sorcerer's Stone",
-        "author": "J.K. Rowling",
+        "authorName": "J.K. Rowling",
         "ISBN": "978-0590353427",
         "publishYear": 1997,
         "genre": ["Fantasy", "Adventure"],
         "rating": 4.5,
         "price": 7.99,
-        "recommend": 150,
+        "recommend": [],
         "purchaseCount": 5000,
         "reviews": [
           {
@@ -74,5 +74,62 @@
                 "date": "2023-03-15"
             }
         ]
-      }  
+      },
+      {
+        "bookImage": "https://example.com/image.jpg",
+        "bookTitle": "The Great Adventure",
+        "shortSynopsis": "A thrilling tale of discovery and courage in a world filled with uncertainty.",
+        "authorName": "John Doe",
+        "ISBN": "978-3-16-148410-0",
+        "publishYear": 2021,
+        "genre": "Adventure",
+        "rating": 4.5,
+        "price": 19.99,
+        "recommend": [],
+        "purchaseCount": 150,
+        "reviews": [
+          {
+            "userId": "u1",
+            "userName": "Alice",
+            "comment": "A fantastic read, couldn't put it down!",
+            "date": "2023-08-15"
+          },
+          {
+            "userId": "u2",
+            "userName": "Bob",
+            "comment": "Interesting plot but too slow for my taste.",
+            "date": "2023-08-20"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "u3",
+            "userName": "Charlie",
+            "comment": "Contains factual errors in chapter 5.",
+            "date": "2023-09-01"
+          }
+        ]
+      },
+      {
+        "bookImage": "https://example.com/another-image.jpg",
+        "bookTitle": "Mystery of the Night",
+        "shortSynopsis": "A gripping mystery that will keep you on the edge of your seat.",
+        "authorName": "Jane Smith",
+        "ISBN": "978-1-23-456789-7",
+        "publishYear": 2020,
+        "genre": "Mystery",
+        "rating": 4.0,
+        "price": 15.99,
+        "recommend": [],
+        "purchaseCount": 200,
+        "reviews": [
+          {
+            "userId": "u4",
+            "userName": "David",
+            "comment": "Loved the twists and turns in the story.",
+            "date": "2023-07-10"
+          }
+        ],
+        "reports": []
+      } 
 ]

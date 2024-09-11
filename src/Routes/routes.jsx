@@ -4,8 +4,10 @@ import Errorpage from "../Errorpage/Errorpage";
 import GeneralUserLayout from "../Layout/GeneralUserLayout";
 import Login from "../Shared/Login And registration/Login";
 import Signup from "../Shared/Login And registration/Signup";
-import Dashboard from "../Shared/Dashboard/Dashboard";
-// import Openai from "../Pages/TempAI/Openai";
+import DashboardLayout from "../Layout/DashboardLayout";
+import AdminHome from "../Pages/AdminPages/Admin Home/AdminHome";
+import ReportedPosts from "../Pages/AdminPages/Reported Posts/ReportedPosts";
+import PendingBooks from "../Pages/AdminPages/Pending Bookss/PendingBooks";
 
 const routes = createBrowserRouter([
     {
@@ -30,8 +32,22 @@ const routes = createBrowserRouter([
     },
     {
       path: "/dashboard",
-      element: <Dashboard />,
+      element: <DashboardLayout />,
       errorElement: <Errorpage />,
+      children:[
+        {
+          path: "/dashboard/home",
+          element: <AdminHome />,
+        },
+        {
+          path: "/dashboard/reportedposts",
+          element: <ReportedPosts />,
+        },
+        {
+          path: "/dashboard/pendingbooks",
+          element: <PendingBooks />,
+        }
+      ]
     }
   ]);
 
