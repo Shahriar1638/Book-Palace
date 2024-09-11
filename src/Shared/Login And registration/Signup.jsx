@@ -40,14 +40,13 @@ const Signup = () => {
             const result = await createUser(email, password);
             await updateProfile(result.user, {
                 displayName: name,
-                photoURL: profileimg,
-                role: role
+                photoURL: profileimg
             });
             try {
-                await axios.post('http://localhost:3000/adduser', userinfo);
+                await axios.post('http://localhost:3000/24141181/adduser', userinfo);
                 swal("SuccessFully Registered", "Your registration is done. Logging In.", "success")
                     .then(() => {
-                        navigate('/login');
+                        navigate('/');
                     });
             } catch (error) {
                 console.error(error);
@@ -79,35 +78,6 @@ const Signup = () => {
         }
     }
 
-    const handleGoogleSignIn = () => {
-        googleSignIn()
-            .then(result => {
-                const userInfo = {
-                    email: result.user?.email,
-                    name: result.user?.displayName,
-                    role: 'generalUser',
-                    profileimg: result.user?.photoURL,
-                    coverimg: '',
-                    postIds: [],
-                    bookCollections: [],
-                    favourites: [],
-                    loyaltyPoints: 0,
-                    subscriptionEndDate: ''
-                }
-                axios.post('http://localhost:3000/adduser', userInfo)
-                    .then(res => {
-                        if (res.status === 200) {
-                            console.log("User added successfully");
-                            swal("SuccessFully Registered", "Your registration is done. Logging In.", "success")
-                            navigate('/');
-                        }
-                    })
-            })
-            .catch(error => {
-                console.error(error);
-            })
-    }
-
     return (
         <div className="grid grid-cols-7">
             <div className="col-span-5 h-screen pl-44">
@@ -117,7 +87,7 @@ const Signup = () => {
                         <input type="text" placeholder="Your name" name="name" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md px-6 py-3" required/>
                         <select name="role" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" required>
                             <option value="">You are a ..</option>
-                            <option value="generalUser">Reader</option>
+                            <option value="reader">Reader</option>
                             <option value="author">Writer</option>
                         </select>
                         <input type="text" placeholder="Your profile photo url" name="profileimg" className="border-b-[1px] border-solid shadow-lg border-gray-400 rounded-md mt-4 px-6 py-3" required/>

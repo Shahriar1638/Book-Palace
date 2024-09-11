@@ -5,17 +5,19 @@ import { AuthContext } from "../../Authentication/Authprovider/Authprovider";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
-    const { user, logOutUser } = useContext(AuthContext);
+    const { user ,userInfos, logOutUser } = useContext(AuthContext);
     const [role, setRole] = useState('');
 
     useEffect(() => {
-        if(user) {
-            setRole(user.role);
+        if(userInfos) {
+            setRole(userInfos.role);
+            console.log(userInfos);
         }
-    }, [user]);
+    }, [userInfos]);
 
     const handleLogOut = () => {
         logOutUser();
+        window.location.reload();
     }
     const Options = 
     <>
@@ -26,7 +28,6 @@ const Navbar = () => {
         { role === 'admin' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Dashboard</NavLink></li> }
         { role === 'author' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Publish a Book</NavLink></li> }
         
-        {/* <li className="uppercase"><NavLink to="/openai" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Open Ai(temporary)</NavLink></li> */}
     </>
     return (
         <nav className="h-24 flex flex-row items-center justify-between px-10 border border-solid border-black">
