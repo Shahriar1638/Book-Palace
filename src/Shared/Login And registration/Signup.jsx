@@ -17,7 +17,7 @@ const Signup = () => {
     const handleSignup = async (e) => {
         e.preventDefault()
         const form = new FormData(e.currentTarget);
-        const email = form.get('email');
+        const email = form.get('email').toLowerCase();
         const password = form.get('password');
         const name = form.get('name');
         const profileimg = form.get('profileimg');
