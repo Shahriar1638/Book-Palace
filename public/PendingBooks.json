@@ -1,48 +1,56 @@
 [
     {
         "bookImage": "https://example.com/images/book1.jpg",
-        "bookTitle": "Dune",
-        "authorName": "Frank Herbert",
+        "bookTitle": "The Lord of the Rings",
+        "authorName": "J.R.R. Tolkien",
         "authorID": "66e12302f287317528957c11",
         "ISBN": "978-0441172719",
-        "publishYear": 1965,
-        "genre": ["Science Fiction", "Adventure"],
+        "publishYear": 1954,
+        "genre": ["Fantasy", "Adventure"],
         "rating": 4.8,
-        "price": 9.99
-      },
-      {
+        "price": 9.99,
+        "synopsis": "The Lord of the Rings is a classic fantasy novel that follows the epic quest of Frodo Baggins to destroy the One Ring and defeat the Dark Lord Sauron. Along the way, Frodo is joined by a diverse group of companions, including the wizard Gandalf, the ranger Aragorn, and the elf Legolas. As they journey through Middle-earth, they encounter danger, betrayal, and sacrifice, but also friendship, courage, and hope. The Lord of the Rings is a timeless tale of good versus evil, and the power of friendship and perseverance in the face of overwhelming odds.",
+        "status": "pending"
+    },
+    {
         "bookImage": "https://example.com/images/book2.jpg",
-        "bookTitle": "Harry Potter and the Sorcerer's Stone",
-        "authorName": "J.K. Rowling",
+        "bookTitle": "To Kill a Mockingbird",
+        "authorName": "Harper Lee",
         "authorID": "66e12302f287317528957c11",
         "ISBN": "978-0590353427",
-        "publishYear": 1997,
-        "genre": ["Fantasy", "Adventure"],
+        "publishYear": 1960,
+        "genre": ["Classic", "Drama"],
         "rating": 4.5,
-        "price": 7.99
-      },
-      {
+        "price": 7.99,
+        "synopsis": "To Kill a Mockingbird is a classic novel that explores themes of racism, justice, and morality. Set in the American South during the Great Depression, the story follows young Scout Finch as she navigates the complexities of her small town and learns valuable lessons about empathy and compassion. Through the trial of Tom Robinson, a black man falsely accused of rape, Scout and her brother Jem witness the deep-rooted prejudice and injustice that permeate their society. As they grapple with the harsh realities of racism, they also encounter the wisdom and integrity of their father, Atticus Finch, who serves as a moral compass in their journey towards understanding and tolerance.",
+        "status": "pending"
+    },
+    {
         "bookImage": "https://example.com/image.jpg",
-        "bookTitle": "The Great Adventure",
+        "bookTitle": "The Great Gatsby",
         "shortSynopsis": "A thrilling tale of discovery and courage in a world filled with uncertainty.",
-        "authorName": "John Doe",
+        "authorName": "F. Scott Fitzgerald",
         "authorID": "66e12302f287317528957c11",
         "ISBN": "978-3-16-148410-0",
-        "publishYear": 2021,
-        "genre": "Adventure",
+        "publishYear": 1925,
+        "genre": ["Classic", "Romance"],
         "rating": 4.5,
-        "price": 19.9
-      },
-      {
+        "price": 19.9,
+        "synopsis": "The Great Gatsby is a classic novel that explores themes of wealth, love, and the American Dream. Set in the Roaring Twenties, the story follows the enigmatic Jay Gatsby as he pursues his dream of rekindling a past romance with Daisy Buchanan. As the characters navigate the glittering world of the Jazz Age, they are forced to confront the dark underbelly of society and the consequences of their choices.",
+        "status": "pending"
+    },
+    {
         "bookImage": "https://example.com/another-image.jpg",
-        "bookTitle": "Mystery of the Night",
+        "bookTitle": "1984",
         "shortSynopsis": "A gripping mystery that will keep you on the edge of your seat.",
-        "authorName": "Jane Smith",
+        "authorName": "George Orwell",
         "authorID": "6e12302f287317528957c11",
         "ISBN": "978-1-23-456789-7",
-        "publishYear": 2020,
-        "genre": "Mystery",
+        "publishYear": 1949,
+        "genre": ["Dystopian", "Political"],
         "rating": 4.0,
-        "price": 15.99
-      }
+        "price": 15.99,
+        "synopsis": "In a dystopian society where Big Brother watches your every move, Winston Smith rebels against the oppressive regime and embarks on a dangerous journey to reclaim his freedom. George Orwell's 1984 is a thought-provoking novel that explores themes of surveillance, government control, and the power of individuality.",
+        "status": "pending"
+    }
 ]

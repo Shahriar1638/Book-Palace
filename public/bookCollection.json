@@ -1,139 +1,144 @@
 [
+  {
+    "bookId": "1",
+    "bookImage": "https://example.com/images/book1.jpg",
+    "bookTitle": "Dune",
+    "authorName": "Frank Herbert",
+    "authorID": "66e12302f287317528957c11",
+    "ISBN": "978-0441172719",
+    "publishYear": 1965,
+    "genre": ["Science Fiction", "Adventure"],
+    "rating": 4.8,
+    "price": 9.99,
+    "recommend": [],
+    "purchaseCount": 2500,
+    "reviews": [
+      {
+      "userId": "user1",
+      "userName": "Alice",
+      "comment": "Amazing book!",
+      "date": "2023-01-15"
+      },
+      {
+      "userId": "user2",
+      "userName": "Bob",
+      "comment": "A must-read for sci-fi fans.",
+      "date": "2023-02-10"
+      }
+    ],
+    "reports": [
+      {
+      "userId": "user3",
+      "userName": "Charlie",
+      "comment": "Found some typos in the text.",
+      "date": "2023-03-05"
+      }
+      
+    ],
+    "synopsis": "A classic science fiction and adventure novel that takes place in a distant future where interstellar travel and political intrigue collide."
+    },
     {
-        "bookId": "1",
-        "bookImage": "https://example.com/images/book1.jpg",
-        "bookTitle": "Dune",
-        "authorName": "Frank Herbert",
-        "authorID": "66e12302f287317528957c11",
-        "ISBN": "978-0441172719",
-        "publishYear": 1965,
-        "genre": ["Science Fiction", "Adventure"],
-        "rating": 4.8,
-        "price": 9.99,
-        "recommend": [],
-        "purchaseCount": 2500,
-        "reviews": [
-          {
-            "userId": "user1",
-            "userName": "Alice",
-            "comment": "Amazing book!",
-            "date": "2023-01-15"
-          },
-          {
-            "userId": "user2",
-            "userName": "Bob",
-            "comment": "A must-read for sci-fi fans.",
-            "date": "2023-02-10"
-          }
-        ],
-        "reports": [
-          {
-            "userId": "user3",
-            "userName": "Charlie",
-            "comment": "Found some typos in the text.",
-            "date": "2023-03-05"
-          }
-        ]
+    "bookId": "2",
+    "bookImage": "https://example.com/images/book2.jpg",
+    "bookTitle": "Harry Potter and the Sorcerer's Stone",
+    "authorName": "J.K. Rowling",
+    "authorID": "66e12302f287317528957c11",
+    "ISBN": "978-0590353427",
+    "publishYear": 1997,
+    "genre": ["Fantasy", "Adventure"],
+    "rating": 4.5,
+    "price": 7.99,
+    "recommend": [],
+    "purchaseCount": 5000,
+    "reviews": [
+      {
+      "userId": "user4",
+      "userName": "David",
+      "comment": "A great start to the series!",
+      "date": "2023-01-20"
       },
       {
-        "bookId": "2",
-        "bookImage": "https://example.com/images/book2.jpg",
-        "bookTitle": "Harry Potter and the Sorcerer's Stone",
-        "authorName": "J.K. Rowling",
-        "authorID": "66e12302f287317528957c11",
-        "ISBN": "978-0590353427",
-        "publishYear": 1997,
-        "genre": ["Fantasy", "Adventure"],
-        "rating": 4.5,
-        "price": 7.99,
-        "recommend": [],
-        "purchaseCount": 5000,
-        "reviews": [
-          {
-            "userId": "user4",
-            "userName": "David",
-            "comment": "A great start to the series!",
-            "date": "2023-01-20"
-          },
-          {
-            "userId": "user5",
-            "userName": "Eve",
-            "comment": "Magical and captivating.",
-            "date": "2023-02-15"
-          }
-        ],
-        "reports": [
-            {
-                "userId": "user6",
-                "userName": "Frank",
-                "comment": "Some pages were missing.",
-                "date": "2023-03-10"
-            },
-            {
-                "userId": "user7",
-                "userName": "Grace",
-                "comment": "The cover was torn.",
-                "date": "2023-03-15"
-            }
-        ]
+      "userId": "user5",
+      "userName": "Eve",
+      "comment": "Magical and captivating.",
+      "date": "2023-02-15"
+      }
+    ],
+    "reports": [
+      {
+        "userId": "user6",
+        "userName": "Frank",
+        "comment": "Some pages were missing.",
+        "date": "2023-03-10"
       },
       {
-        "bookImage": "https://example.com/image.jpg",
-        "bookTitle": "The Great Adventure",
-        "shortSynopsis": "A thrilling tale of discovery and courage in a world filled with uncertainty.",
-        "authorName": "John Doe",
-        "authorID": "66e12302f287317528957c11",
-        "ISBN": "978-3-16-148410-0",
-        "publishYear": 2021,
-        "genre": "Adventure",
-        "rating": 4.5,
-        "price": 19.99,
-        "recommend": [],
-        "purchaseCount": 150,
-        "reviews": [
-          {
-            "userId": "u1",
-            "userName": "Alice",
-            "comment": "A fantastic read, couldn't put it down!",
-            "date": "2023-08-15"
-          },
-          {
-            "userId": "u2",
-            "userName": "Bob",
-            "comment": "Interesting plot but too slow for my taste.",
-            "date": "2023-08-20"
-          }
-        ],
-        "reports": [
-          {
-            "userId": "u3",
-            "userName": "Charlie",
-            "comment": "Contains factual errors in chapter 5.",
-            "date": "2023-09-01"
-          }
-        ]
+        "userId": "user7",
+        "userName": "Grace",
+        "comment": "The cover was torn.",
+        "date": "2023-03-15"
+      }
+    ],
+    "synopsis": "The first book in the beloved Harry Potter series, where a young boy discovers he is a wizard and embarks on a magical journey at Hogwarts School of Witchcraft and Wizardry."
+    },
+    {
+    "bookImage": "https://example.com/image.jpg",
+    "bookTitle": "The Great Adventure",
+    "shortSynopsis": "A thrilling tale of discovery and courage in a world filled with uncertainty.",
+    "authorName": "John Doe",
+    "authorID": "66e12302f287317528957c11",
+    "ISBN": "978-3-16-148410-0",
+    "publishYear": 2021,
+    "genre": "Adventure",
+    "rating": 4.5,
+    "price": 19.99,
+    "recommend": [],
+    "purchaseCount": 150,
+    "reviews": [
+      {
+      "userId": "u1",
+      "userName": "Alice",
+      "comment": "A fantastic read, couldn't put it down!",
+      "date": "2023-08-15"
       },
       {
-        "bookImage": "https://example.com/another-image.jpg",
-        "bookTitle": "Mystery of the Night",
-        "shortSynopsis": "A gripping mystery that will keep you on the edge of your seat.",
-        "authorName": "Jane Smith",
-        "authorID": "6e12302f287317528957c11",
-        "ISBN": "978-1-23-456789-7",
-        "publishYear": 2020,
-        "genre": "Mystery",
-        "rating": 4.0,
-        "price": 15.99,
-        "recommend": [],
-        "purchaseCount": 200,
-        "reviews": [
-          {
-            "userId": "u4",
-            "userName": "David",
-            "comment": "Loved the twists and turns in the story.",
-            "date": "2023-07-10"
-          }
-        ],
-        "reports": []
-      } 
+      "userId": "u2",
+      "userName": "Bob",
+      "comment": "Interesting plot but too slow for my taste.",
+      "date": "2023-08-20"
+      }
+    ],
+    "reports": [
+      {
+      "userId": "u3",
+      "userName": "Charlie",
+      "comment": "Contains factual errors in chapter 5.",
+      "date": "2023-09-01"
+      }
+    ],
+    "synopsis": "Follow the protagonist on an epic adventure as they navigate through a world filled with danger, mystery, and unexpected twists."
+    },
+    {
+    "bookImage": "https://example.com/another-image.jpg",
+    "bookTitle": "Mystery of the Night",
+    "shortSynopsis": "A gripping mystery that will keep you on the edge of your seat.",
+    "authorName": "Jane Smith",
+    "authorID": "6e12302f287317528957c11",
+    "ISBN": "978-1-23-456789-7",
+    "publishYear": 2020,
+    "genre": "Mystery",
+    "rating": 4.0,
+    "price": 15.99,
+    "recommend": [],
+    "purchaseCount": 200,
+    "reviews": [
+      {
+      "userId": "u4",
+      "userName": "David",
+      "comment": "Loved the twists and turns in the story.",
+      "date": "2023-07-10"
+      }
+    ],
+    "reports": [],
+    "synopsis": "Unravel the secrets of a dark and enigmatic night as you delve into this thrilling mystery novel."
+    } 
 ]
