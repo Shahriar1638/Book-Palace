@@ -1,0 +1,89 @@
+[
+    {
+        "publishDate": "2024-09-09",
+        "userId": "user001",
+        "userEmail": "user001@example.com",
+        "upvote": [],
+        "downvote": [],
+        "comments": [
+        {
+            "fUserId": "user002",
+            "userEmail": "user002@example.com",
+        
+            "comment": "Great post!",
+            "date": "2024-09-09"
+        }
+        ],
+        "postText":"shafim daddy",
+        "postType": "suggestion",
+        "reports": [
+        {
+            "fUserId": "user003",
+            "userEmail": "user003@example.com",
+            "comment": "Inappropriate content",
+            "date": "2024-09-09"
+        }
+        ]
+    },
+    {
+        "publishDate": "2024-09-08",
+        "userId": "user002",
+        "userEmail": "user002@example.com",
+        "upvote": [],
+        "downvote": [],
+        "comments": [
+        {
+            "fUserId": "user001",
+            "userEmail": "user001@example.com",
+            "comment": "Very informative.",
+            "date": "2024-09-08"
+        }
+        ],
+        "postType": "review",
+        "reports": []
+    },
+    {
+        "publishDate": "2024-09-07",
+        "userId": "user003",
+        "userEmail": "user003@example.com",
+        "upvote": [],
+        "downvote": [],
+        "comments": [],
+        "postType": "recommendation",
+        "reports": []
+    },
+    {
+        "publishDate": "2024-09-06",
+        "userId": "user004",
+        "userEmail": "user004@example.com",
+        "upvote": [],
+        "downvote": [],
+        "comments": [
+        {
+            "fUserId": "user005",
+            "userEmail": "user005@example.com",
+            "comment": "I completely agree with this opinion.",
+            "date": "2024-09-06"
+        }
+        ],
+        "postType": "personalOpinion",
+        "reports": []
+    },
+    {
+        "publishDate": "2024-09-05",
+        "userId": "user005",
+        "userEmail": "user005@example.com",
+        "upvote": [],
+        "downvote": [],
+        "comments": [],
+        "postType": "others",
+        "reports": [
+        {
+            "fUserId": "user004",
+            "userEmail": "user004@example.com",
+            "comment": "Offensive language",
+            "date": "2024-09-05"
+        }
+        ]
+    }
+]  

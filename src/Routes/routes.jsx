@@ -8,6 +8,7 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import AdminHome from "../Pages/AdminPages/Admin Home/AdminHome";
 import ReportedPosts from "../Pages/AdminPages/Reported Posts/ReportedPosts";
 import PendingBooks from "../Pages/AdminPages/Pending Bookss/PendingBooks";
+import PostMenu from "../Pages/Forums/Load Post/PostMenu";
 
 const routes = createBrowserRouter([
     {
@@ -19,7 +20,10 @@ const routes = createBrowserRouter([
           path: "/",
           element: <Home></Home>,
         },
-        
+        {
+          path:"/communityforums",
+          element: <PostMenu></PostMenu>
+        }
       ],
     },
     {
