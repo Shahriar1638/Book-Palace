@@ -6,7 +6,7 @@ import logo from "../../assets/logo.png";
 
 const Navbar = () => {
     const { user ,userInfos, logOutUser } = useContext(AuthContext);
-    const [role, setRole] = useState('');
+    const [ role, setRole ] = useState('');
 
     useEffect(() => {
         if(userInfos) {
@@ -24,9 +24,9 @@ const Navbar = () => {
         <li className="uppercase"><NavLink to="/" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Home</NavLink></li>
         <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Books Collection</NavLink></li>
         <li className="uppercase"><NavLink to="/communityforums" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Community Forums</NavLink></li>
-        <li className="uppercase"><NavLink to="/dashboard" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Dashboard</NavLink></li>
+        {/* <li className="uppercase"><NavLink to="/dashboard" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Dashboard</NavLink></li> */}
         { role !== 'admin' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Cart</NavLink></li> }
-        {/* { role === 'admin' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Dashboard</NavLink></li> } */}
+        { role === 'admin' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Dashboard</NavLink></li> }
         { role === 'author' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Publish a Book</NavLink></li> }
         
     </>
@@ -42,9 +42,9 @@ const Navbar = () => {
             </div>
             <div>
                 {
-                    user ? 
+                    userInfos ? 
                     <div className="flex items-center">
-                        <h1 className="mr-4">{user.displayName}</h1>
+                        <h1 className="mr-4">{userInfos.name}</h1>
                         <button onClick={handleLogOut}>Logout</button>
                     </div> 
                     : <button><Link to={"/login"}>Login</Link></button> 

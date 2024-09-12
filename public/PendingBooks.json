@@ -1,0 +1,48 @@
+[
+    {
+        "bookImage": "https://example.com/images/book1.jpg",
+        "bookTitle": "Dune",
+        "authorName": "Frank Herbert",
+        "authorID": "66e12302f287317528957c11",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": ["Science Fiction", "Adventure"],
+        "rating": 4.8,
+        "price": 9.99
+      },
+      {
+        "bookImage": "https://example.com/images/book2.jpg",
+        "bookTitle": "Harry Potter and the Sorcerer's Stone",
+        "authorName": "J.K. Rowling",
+        "authorID": "66e12302f287317528957c11",
+        "ISBN": "978-0590353427",
+        "publishYear": 1997,
+        "genre": ["Fantasy", "Adventure"],
+        "rating": 4.5,
+        "price": 7.99
+      },
+      {
+        "bookImage": "https://example.com/image.jpg",
+        "bookTitle": "The Great Adventure",
+        "shortSynopsis": "A thrilling tale of discovery and courage in a world filled with uncertainty.",
+        "authorName": "John Doe",
+        "authorID": "66e12302f287317528957c11",
+        "ISBN": "978-3-16-148410-0",
+        "publishYear": 2021,
+        "genre": "Adventure",
+        "rating": 4.5,
+        "price": 19.9
+      },
+      {
+        "bookImage": "https://example.com/another-image.jpg",
+        "bookTitle": "Mystery of the Night",
+        "shortSynopsis": "A gripping mystery that will keep you on the edge of your seat.",
+        "authorName": "Jane Smith",
+        "authorID": "6e12302f287317528957c11",
+        "ISBN": "978-1-23-456789-7",
+        "publishYear": 2020,
+        "genre": "Mystery",
+        "rating": 4.0,
+        "price": 15.99
+      }
+]

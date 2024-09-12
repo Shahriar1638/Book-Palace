@@ -2,12 +2,14 @@
 import { GoogleAuthProvider, createUserWithEmailAndPassword, deleteUser, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/firebase.init";
-import axios from "axios";
+// import axios from "axios";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 export const AuthContext = createContext(null);
 const googleProvider = new GoogleAuthProvider();
 
 const Authprovider = ({children}) => {
+    const axiosPublic = useAxiosPublic();
     const [user, setUser] = useState(null);
     const [userInfos, setUserInfos] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -43,7 +45,7 @@ const Authprovider = ({children}) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             if (currentUser) {
-                axios.get(`http://localhost:3000/24141181/currentuser?email=${currentUser?.email}`)
+                axiosPublic.get(`/24141181/currentuser?email=${currentUser?.email}`)
                     .then(response => setUserInfos(response.data))
             }
             console.log("Currently logged in user infos: ", currentUser);
@@ -54,7 +56,7 @@ const Authprovider = ({children}) => {
             setLoading(false);
         });
         return () => unsubscribe();
-    }, []);
+    }, [axiosPublic]);
     
 
     const authInfo = {

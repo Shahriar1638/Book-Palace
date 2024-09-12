@@ -7,7 +7,7 @@ import Signup from "../Shared/Login And registration/Signup";
 import DashboardLayout from "../Layout/DashboardLayout";
 import AdminHome from "../Pages/AdminPages/Admin Home/AdminHome";
 import ReportedPosts from "../Pages/AdminPages/Reported Posts/ReportedPosts";
-import PendingBooks from "../Pages/AdminPages/Pending Bookss/PendingBooks";
+import PendingBooks from "../Pages/AdminPages/Pending Books/PendingBooks";
 
 const routes = createBrowserRouter([
     {

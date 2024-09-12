@@ -5,12 +5,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Authentication/Authprovider/Authprovider";
 import { updateProfile } from "firebase/auth";
 import swal from 'sweetalert';
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const Signup = () => {
     const [ checkPassword, setCheckPassword ] = useState('');
+    const axiosPublic = useAxiosPublic();
     const [ confirmPassword, setConfirmPassword ] = useState('');
     const [error , setError] = useState(null);
-    const { createUser, googleSignIn,removeUser } = useContext(AuthContext);
+    const { createUser, removeUser } = useContext(AuthContext);
     const navigate = useNavigate();
     
 
@@ -43,7 +45,7 @@ const Signup = () => {
                 photoURL: profileimg
             });
             try {
-                await axios.post('http://localhost:3000/24141181/adduser', userinfo);
+                await axiosPublic.post('/24141181/adduser', userinfo);
                 swal("SuccessFully Registered", "Your registration is done. Logging In.", "success")
                     .then(() => {
                         navigate('/');
@@ -107,9 +109,6 @@ const Signup = () => {
                     <div className="mt-4">
                         <h1>Already have an account ? then,<span className="text-blue-500 underline uppercase"> <Link to={"/login"}> log in</Link></span></h1>
                     </div>
-                    {/* <div>
-                        <button onClick={handleGoogleSignIn} className="bg-blue-500 text-white p-2 rounded-md mt-4">Sign up with Google</button>
-                    </div> */}
                 </div>
             </div>
             <div className="col-span-2 h-screen bg-purple-500">
