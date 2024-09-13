@@ -8,6 +8,8 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import AdminHome from "../Pages/AdminPages/Admin Home/AdminHome";
 import ReportedPosts from "../Pages/AdminPages/Reported Posts/ReportedPosts";
 import PendingBooks from "../Pages/AdminPages/Pending Books/PendingBooks";
+import PostMenu from "../Pages/Forums/Load Post/PostMenu";
+import CreatePost from "../Pages/Forums/Create Posts/CreatePost";
 
 const routes = createBrowserRouter([
     {
@@ -19,6 +21,14 @@ const routes = createBrowserRouter([
           path: "/",
           element: <Home></Home>,
         },
+        {
+          path:"/communityforums",
+          element: <PostMenu />
+        },
+        {
+          path:"/createpost",
+          element: <CreatePost />
+        }
         
       ],
     },

@@ -11,7 +11,6 @@ const Navbar = () => {
     useEffect(() => {
         if(userInfos) {
             setRole(userInfos.role);
-            console.log(userInfos);
         }
     }, [userInfos]);
 

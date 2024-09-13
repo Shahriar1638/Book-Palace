@@ -1,0 +1,85 @@
+[
+    {
+      "publishDate": "2024-09-12",
+      "userId": "66e119dc75b0552b5777e8c1",
+      "userEmail": "john.doe@example.com",
+      "userName" : "John Doe",
+      "postText": "I highly recommend trying out the new coffee shop in town!",
+      "upvote": [],
+      "downvote": [],
+      "comments": [
+        {
+          "userId": "u123",
+          "userEmail": "jane.doe@example.com",
+          "comment": "Thanks for the suggestion, I’ll check it out!",
+          "date": "2024-09-13"
+        },
+        {
+          "userId": "u124",
+          "userEmail": "alice@example.com",
+          "comment": "I went there, it’s amazing!",
+          "date": "2024-09-14"
+        }
+      ],
+      "postType": "recommendation",
+      "reports": []
+    },
+    {
+      "publishDate": "2024-09-10",
+      "userId": "66e119dc75b0552b5777e8c1",
+      "userEmail": "sara.smith@example.com",
+      "userName" : "Sara Smith",
+      "postText": "I think the latest software update could have been better. The UI feels a bit slow.",
+      "upvote": [],
+      "downvote": [],
+      "comments": [
+        {
+          "userId": "u125",
+          "userEmail": "bob@example.com",
+          "comment": "Totally agree, it's not as responsive as before.",
+          "date": "2024-09-11"
+        }
+      ],
+      "postType": "personalOpinion",
+      "reports": [
+        {
+          "userId": "66e12302f287317528957c11",
+          "userEmail": "james@example.com",
+          "comment": "Inaccurate information about the update.",
+          "date": "2024-09-12"
+        }
+      ]
+    },
+    {
+      "publishDate": "2024-09-05",
+      "userId": "66e119dc75b0552b5777e8c1",
+      "userEmail": "mike.jones@example.com",
+      "userName" : "Mike Jones",
+      "postText": "Here’s a review of the new movie I watched last night. It was great, but the pacing was a bit off.",
+      "upvote": [],
+      "downvote": [],
+      "comments": [
+        {
+          "userId": "u127",
+          "userEmail": "kate@example.com",
+          "comment": "Nice review, I felt the same about the pacing!",
+          "date": "2024-09-06"
+        }
+      ],
+      "postType": "review",
+      "reports": [
+        {
+            "userId": "66e12302f287317528957c11",
+            "userEmail": "jake@example.com",
+            "comment": "Inaccurate information about the movie.",
+            "date": "2024-09-07"
+        },
+        {
+            "userId": "66e12302f287317528957c11",
+            "userEmail": "mac@same.thing",
+            "comment": "Inaccurate information about the movie.",
+            "date": "2024-09-07"
+        }
+      ]
+    }
+]
