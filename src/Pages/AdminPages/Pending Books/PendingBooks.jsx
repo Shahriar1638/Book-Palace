@@ -69,21 +69,21 @@ const PendingBooks = () => {
                 <table className="table w-full">
                     <thead>
                         <tr>
-                            <th className="w-12"></th>
-                            <th className="w-36 text-start">Author Name</th>
-                            <th className="w-64 text-start">Book title</th>
-                            <th className="w-24 text-start">Book Price</th>
-                            <th className="w-80 text-start">Accept or Reject</th>
+                            <th className="w-12 h-10"></th>
+                            <th className="w-36 h-10 text-start">Author Name</th>
+                            <th className="w-64 h-10 text-start">Book title</th>
+                            <th className="w-24 h-10 text-start">Book Price</th>
+                            <th className="w-80 h-10 text-start">Accept or Reject</th>
                         </tr>
                     </thead>
                     <tbody>
                         { pendingBooks.map((book, index) => (
                             <tr key={index} >
-                                <td>{index+1}</td>
-                                <td>{book.authorName}</td>
-                                <td>{book.bookTitle}</td>
-                                <td>{book.price}</td>
-                                <td className="flex items-center">
+                                <td className="h-8">{index+1}</td>
+                                <td className="h-8">{book.authorName}</td>
+                                <td className="h-8">{book.bookTitle}</td>
+                                <td className="h-8">{book.price}</td>
+                                <td className="flex items-center h-8">
                                     {
                                         book.status === 'pending' ? 
                                         <>

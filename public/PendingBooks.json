@@ -28,7 +28,6 @@
     {
         "bookImage": "https://example.com/image.jpg",
         "bookTitle": "The Great Gatsby",
-        "shortSynopsis": "A thrilling tale of discovery and courage in a world filled with uncertainty.",
         "authorName": "F. Scott Fitzgerald",
         "authorID": "66e12302f287317528957c11",
         "ISBN": "978-3-16-148410-0",
@@ -42,7 +41,6 @@
     {
         "bookImage": "https://example.com/another-image.jpg",
         "bookTitle": "1984",
-        "shortSynopsis": "A gripping mystery that will keep you on the edge of your seat.",
         "authorName": "George Orwell",
         "authorID": "6e12302f287317528957c11",
         "ISBN": "978-1-23-456789-7",

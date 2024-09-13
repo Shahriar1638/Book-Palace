@@ -23,10 +23,8 @@ const Navbar = () => {
         <li className="uppercase"><NavLink to="/" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Home</NavLink></li>
         <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Books Collection</NavLink></li>
         <li className="uppercase"><NavLink to="/communityforums" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Community Forums</NavLink></li>
-        {/* <li className="uppercase"><NavLink to="/dashboard" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Dashboard</NavLink></li> */}
-        { role !== 'admin' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Cart</NavLink></li> }
-        { role === 'admin' && role !== '' && <li className="uppercase"><NavLink to="/dashboard" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Dashboard</NavLink></li> }
-        { role === 'author' && role !== '' && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Publish a Book</NavLink></li> }
+        { (role != 'admin' && role != '') && <li className="uppercase"><NavLink to="/bookscollection" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Cart</NavLink></li> }
+        { (role === 'admin' || role === 'author') && role !== '' && <li className="uppercase"><NavLink to="/dashboard" className={({ isActive, isPending }) => isActive? "text-blue-500" : ""}>Dashboard</NavLink></li> }
         
     </>
     return (

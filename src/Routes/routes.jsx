@@ -10,6 +10,8 @@ import ReportedPosts from "../Pages/AdminPages/Reported Posts/ReportedPosts";
 import PendingBooks from "../Pages/AdminPages/Pending Books/PendingBooks";
 import PostMenu from "../Pages/Forums/Load Post/PostMenu";
 import CreatePost from "../Pages/Forums/Create Posts/CreatePost";
+import MyPendingBooks from "../Pages/AuthorDashBoard/MyPendingBooksStatus/MyPendingBooks";
+import PublishBoook from "../Pages/AuthorDashBoard/PublishBook/PublishBoook";
 
 const routes = createBrowserRouter([
     {
@@ -45,6 +47,8 @@ const routes = createBrowserRouter([
       element: <DashboardLayout />,
       errorElement: <Errorpage />,
       children:[
+
+        // Admin routes
         {
           path: "/dashboard/home",
           element: <AdminHome />,
@@ -55,6 +59,24 @@ const routes = createBrowserRouter([
         },
         {
           path: "/dashboard/pendingbooks",
+          element: <PendingBooks />,
+        },
+
+        // Author routes
+        {
+          path: "/dashboard/authorhome",
+          element: <PendingBooks />,
+        },
+        {
+          path: "/dashboard/bookpublish",
+          element: <PublishBoook />,
+        },
+        {
+          path: "/dashboard/mypendingbooks",
+          element: <MyPendingBooks />,
+        },
+        {
+          path: "/dashboard/mypublishedbooks",
           element: <PendingBooks />,
         }
       ]
