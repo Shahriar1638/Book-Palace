@@ -10,12 +10,13 @@ const Menu = () => {
   const [sortOption, setSortOption] = useState("default");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(8);
+  const [bookRatings, setBookRatings] = useState({}); 
 
   useEffect(() => {
     
     const fetchData = async () => {
       try {
-        const response = await fetch("menu.json");
+        const response = await fetch("bookCollection.json");
         const data = await response.json();
         setMenu(data);
         setFilteredItems(data); 
@@ -30,14 +31,14 @@ const Menu = () => {
 
 
 
-  const filterItems = (category) => {
+  const filterItems = (genre) => {
     const filtered =
-      category === "all"
+      genre === "all"
         ? menu
-        : menu.filter((item) => item.category === category);
+        : menu.filter((item) => item.genre === genre);
 
     setFilteredItems(filtered);
-    setSelectedCategory(categorys);
+    setSelectedCategory(genre);
     setCurrentPage(1);
   };
   const showAll = () => {
@@ -73,6 +74,12 @@ const Menu = () => {
     setFilteredItems(sortedItems);
     setCurrentPage(1);
   };
+  const handleRatingChange = (bookId, rating) => {
+    setBookRatings(prevRatings => ({
+      ...prevRatings,
+      [bookId]: rating
+    }));
+  };
 
 
   // Pagination 
@@ -84,9 +91,12 @@ const Menu = () => {
   return (
 
     <div className='mt-28 px-4 lg:px24'>
+      <p className='text-center font-extrabold text-darkbrown '>LET'S DIVE INTO BOOKS</p>
       <div className="flex justify-end mb-4 rounded-sm">
+      
         <div className="bg-darkbrown p-2 ">
           <FaFilter className="text-beige h-4 w-4" />
+          
         </div>
         <select name="sort"
           id="sort"
@@ -101,11 +111,11 @@ const Menu = () => {
           <option value="high-to-low">High to Low</option>
         </select>
       </div>
-      <div className="flex flex-row justify-start md:items-center md:gap-8 gap-4  flex-wrap">
+      <div className="flex flex-row justify-start md:items-center md:gap-8 gap-4 my-8 flex-wrap">
 
         <button
           onClick={showAll}
-          className={selectedCategory === "all" ? "active" : ""}
+          className={selectedCategory === "all" ? "active" : "" } 
         >
           All
         </button>
@@ -149,7 +159,7 @@ const Menu = () => {
             <div className="card bg-beige w-65 shadow-xl">
               <figure className="px-10 pt-10">
                 <img
-                  src={menu.imageURL}
+                  src={menu.bookImage}
                   alt="books"
                   className="rounded-xl hover:scale-105 transition-all duration-200 md:h-72" />
               </figure>
@@ -158,15 +168,20 @@ const Menu = () => {
                 <p>{menu.authorName}</p>
                 <p>{menu.price}</p>
                 <div className="rating">
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green" />
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green"/>
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green" />
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green" />
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green" />
-                </div>
+                {[...Array(5)].map((_, index) => (
+                  <input
+                    key={index}
+                    type="radio"
+                    name={`rating-${menu.bookId}`}
+                    className="mask mask-star-2 bg-green"
+                    onClick={() => handleRatingChange(menu.bookId, index + 1)}
+                    checked={bookRatings[menu.bookId] === index + 1}
+                  />
+                ))}
+              </div>
 
                 <div className="card-actions">
-                  <button className="btn bg-green text-beige hover:scale-105">ADD TO CART </button>
+                  <button className="btn bg-green text-beige hover:scale-105"><a href={`/productdetail/${menu.bookId}`}>Details</a> </button>
                 </div>
               </div>
             </div>

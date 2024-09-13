@@ -5,6 +5,7 @@ import GeneralUserLayout from "../Layout/GeneralUserLayout";
 import Login from "../Shared/Login And registration/Login";
 import Signup from "../Shared/Login And registration/Signup";
 import Menu from "../Pages/Menu/Menu";
+import ProductDetail from "../Pages/Menu/ProductDetail";
 // import Openai from "../Pages/TempAI/Openai";
 
 const routes = createBrowserRouter([
@@ -21,6 +22,11 @@ const routes = createBrowserRouter([
           path: "/menu",
           element: <Menu/>,
         },
+        {
+          path: "/productdetail/:bookId",  
+          element: <ProductDetail />,
+        },
+        
         
         
         // {

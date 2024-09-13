@@ -6,7 +6,7 @@
       "imageURL": "book1.jpg",
       "category": "Fiction",
       "price":"200",
-      "rating":"0",
+      "rating":0,
       "bookDescription": "Since Gran died a few months ago, twenty-five-year-old Molly has been navigating life's complexities all by herself. No matter—she throws herself with gusto into her work as a hotel maid. Her unique character, along with her obsessive love of cleaning and proper etiquette, make her an ideal fit for the job. She delights in donning her crisp uniform each morning, stocking her cart with miniature soaps and bottles, and returning guest rooms at the Regency Grand Hotel to a state of perfection.",
       "bookPDFURL": "https://www.goodreads.com/book/show/55196813-the-maid"
     },

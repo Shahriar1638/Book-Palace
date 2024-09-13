@@ -1,14 +1,14 @@
 [
     {
         "bookId": "1",
-        "bookImage": "https://example.com/images/book1.jpg",
-        "bookTitle": "Dune",
-        "author": "Frank Herbert",
+        "bookImage": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1634748496i/58065033.jpg",
+        "bookTitle": "Lessons in Chemistry",
+        "author": "Bonnie Garmus",
         "ISBN": "978-0441172719",
         "publishYear": 1965,
-        "genre": ["Science Fiction", "Adventure"],
-        "rating": 4.8,
-        "price": 9.99,
+        "genre": "Science",
+        "rating": 0,
+        "price": 200,
         "recommend": 120,
         "purchaseCount": 2500,
         "reviews": [
@@ -36,14 +36,14 @@
       },
       {
         "bookId": "2",
-        "bookImage": "https://example.com/images/book2.jpg",
-        "bookTitle": "Harry Potter and the Sorcerer's Stone",
-        "author": "J.K. Rowling",
+        "bookImage": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1640745736i/56060300.jpg",
+        "bookTitle": "Heartstopper: Volume Four",
+        "author": "Alice Oseman",
         "ISBN": "978-0590353427",
         "publishYear": 1997,
-        "genre": ["Fantasy", "Adventure"],
-        "rating": 4.5,
-        "price": 7.99,
+        "genre": "Fantasy",
+        "rating": 0,
+        "price": 200,
         "recommend": 150,
         "purchaseCount": 5000,
         "reviews": [
@@ -74,5 +74,285 @@
                 "date": "2023-03-15"
             }
         ]
-      }  
+      },
+      {
+        "bookId": "3",
+        "bookImage": "book1.jpg",
+        "bookTitle": "BUCOLICA GEORGICA",
+        "author": "Ae Neis",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": "Fiction",
+        "rating": 0,
+        "price": 200,
+        "recommend": 120,
+        "purchaseCount": 2500,
+        "reviews": [
+          {
+            "userId": "user1",
+            "userName": "Alice",
+            "comment": "Amazing book!",
+            "date": "2023-01-15"
+          },
+          {
+            "userId": "user2",
+            "userName": "Bob",
+            "comment": "A must-read for sci-fi fans.",
+            "date": "2023-02-10"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "user3",
+            "userName": "Charlie",
+            "comment": "Found some typos in the text.",
+            "date": "2023-03-05"
+          }
+        ]
+      },
+      {
+        "bookId": "4",
+        "bookImage": "book2.jpg",
+        "bookTitle": "The Alchemist",
+        "author": "Paulo Coelho",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": "Fiction",
+        "rating": 0,
+        "price": 400,
+        "recommend": 120,
+        "purchaseCount": 2500,
+        "reviews": [
+          {
+            "userId": "user1",
+            "userName": "Alice",
+            "comment": "Amazing book!",
+            "date": "2023-01-15"
+          },
+          {
+            "userId": "user2",
+            "userName": "Bob",
+            "comment": "A must-read for sci-fi fans.",
+            "date": "2023-02-10"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "user3",
+            "userName": "Charlie",
+            "comment": "Found some typos in the text.",
+            "date": "2023-03-05"
+          }
+        ]
+      },
+      {
+        "bookId": "5",
+        "bookImage":  "book3.jpg",
+        "bookTitle": "Carrie Anne's World",
+        "author": "Mark Whiteway",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": "Fiction",
+        "rating": 0,
+        "price": 500,
+        "recommend": 120,
+        "purchaseCount": 2500,
+        "reviews": [
+          {
+            "userId": "user1",
+            "userName": "Alice",
+            "comment": "Amazing book!",
+            "date": "2023-01-15"
+          },
+          {
+            "userId": "user2",
+            "userName": "Bob",
+            "comment": "A must-read for sci-fi fans.",
+            "date": "2023-02-10"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "user3",
+            "userName": "Charlie",
+            "comment": "Found some typos in the text.",
+            "date": "2023-03-05"
+          }
+        ]
+      },
+      {
+        "bookId": "6",
+        "bookImage":  "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1649848581i/60435878.jpg",
+        "bookTitle": "Carrie Soto Is Back",
+        "author": "Taylor Jenkins",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": "Romance",
+        "rating": 0,
+        "price": 400,
+        "recommend": 120,
+        "purchaseCount": 2500,
+        "reviews": [
+          {
+            "userId": "user1",
+            "userName": "Alice",
+            "comment": "Amazing book!",
+            "date": "2023-01-15"
+          },
+          {
+            "userId": "user2",
+            "userName": "Bob",
+            "comment": "A must-read for sci-fi fans.",
+            "date": "2023-02-10"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "user3",
+            "userName": "Charlie",
+            "comment": "Found some typos in the text.",
+            "date": "2023-03-05"
+          }
+        ]
+      },
+      {
+        "bookId": "7",
+        "bookImage": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1633097753i/40132775.jpg",
+        "bookTitle": "House of Sky",
+        "author": "Sarah J. Maas",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": "Thriller",
+        "rating": 0,
+        "price": 500,
+        "recommend": 120,
+        "purchaseCount": 2500,
+        "reviews": [
+          {
+            "userId": "user1",
+            "userName": "Alice",
+            "comment": "Amazing book!",
+            "date": "2023-01-15"
+          },
+          {
+            "userId": "user2",
+            "userName": "Bob",
+            "comment": "A must-read for sci-fi fans.",
+            "date": "2023-02-10"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "user3",
+            "userName": "Charlie",
+            "comment": "Found some typos in the text.",
+            "date": "2023-03-05"
+          }
+        ]
+      },
+      {
+        "bookId": "8",
+        "bookImage":  "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1638867089i/58690308.jpg",
+        "bookTitle": "Book Lovers",
+        "author": "Emily Henry",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": "Romance",
+        "rating": 0,
+        "price": 200,
+        "recommend": 120,
+        "purchaseCount": 2500,
+        "reviews": [
+          {
+            "userId": "user1",
+            "userName": "Alice",
+            "comment": "Amazing book!",
+            "date": "2023-01-15"
+          },
+          {
+            "userId": "user2",
+            "userName": "Bob",
+            "comment": "A must-read for sci-fi fans.",
+            "date": "2023-02-10"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "user3",
+            "userName": "Charlie",
+            "comment": "Found some typos in the text.",
+            "date": "2023-03-05"
+          }
+        ]
+      },
+      {
+        "bookId": "9",
+        "bookImage": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1626710416i/58446227.jpg",
+        "bookTitle": "Sea of Tranquility",
+        "author": "Emily St. John",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": "Thriller",
+        "rating": 0,
+        "price": 400,
+        "recommend": 120,
+        "purchaseCount": 2500,
+        "reviews": [
+          {
+            "userId": "user1",
+            "userName": "Alice",
+            "comment": "Amazing book!",
+            "date": "2023-01-15"
+          },
+          {
+            "userId": "user2",
+            "userName": "Bob",
+            "comment": "A must-read for sci-fi fans.",
+            "date": "2023-02-10"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "user3",
+            "userName": "Charlie",
+            "comment": "Found some typos in the text.",
+            "date": "2023-03-05"
+          }
+        ]
+      },
+      {
+        "bookId": "10",
+        "bookImage":"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1635260162i/58724923.jpg",
+        "bookTitle": "Hidden Pictures",
+        "author": "Jason Rekulak",
+        "ISBN": "978-0441172719",
+        "publishYear": 1965,
+        "genre": "Literary",
+        "rating": 0,
+        "price": 400,
+        "recommend": 120,
+        "purchaseCount": 2500,
+        "reviews": [
+          {
+            "userId": "user1",
+            "userName": "Alice",
+            "comment": "Amazing book!",
+            "date": "2023-01-15"
+          },
+          {
+            "userId": "user2",
+            "userName": "Bob",
+            "comment": "A must-read for sci-fi fans.",
+            "date": "2023-02-10"
+          }
+        ],
+        "reports": [
+          {
+            "userId": "user3",
+            "userName": "Charlie",
+            "comment": "Found some typos in the text.",
+            "date": "2023-03-05"
+          }
+        ]
+      } 
 ]

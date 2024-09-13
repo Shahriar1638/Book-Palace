@@ -52,27 +52,19 @@ const Welcome = () => {
 
 
       <h3 className='text-darkbrown font-bold text-4xl px-200 py-200 text-center'>Customer's Love</h3>
-      <br></br>
+      
       <div className=" carousel flex justify-center align-center ">
-        <div id="slide1" className="carousel-item relative w-full flex justify-center items-center ">
-          <img
-            src="review1.png" 
-            className="w-3/4 mx-auto" />
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" className="btn btn-circle">❮</a>
-            <a href="#slide2" className="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="slide2" className="carousel-item relative w-full flex justify-center align-center ">
+        
+        <div id="slide2" className="carousel-item relative w-full flex justify-center items-center ">
           <img
             src="review2.png "
-            className="w-3/4 mx-auto" />
+            className="w-3/4 mx-auto "  />
           <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide1" className="btn btn-circle">❮</a>
             <a href="#slide3" className="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide3" className="carousel-item relative w-full flex justify-center align-center ">
+        <div id="slide3" className="carousel-item relative w-full flex justify-center items-center ">
           <img
             src="review3.png"
             className="w-3/4 mx-auto" />
@@ -81,7 +73,7 @@ const Welcome = () => {
             <a href="#slide4" className="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide4" className="carousel-item relative w-full flex justify-center align-center ">
+        <div id="slide4" className="carousel-item relative w-full flex justify-center items-center ">
           <img
             src="review4.png"
             className="w-3/4 mx-auto" />
