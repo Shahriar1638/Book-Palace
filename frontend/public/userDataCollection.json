@@ -1,0 +1,110 @@
+[
+    {
+        "Name": "John Doe",
+        "Email": "johndoe@example.com",
+        "Profileimgurl": "https://example.com/profile/johndoe",
+        "Coverimgurl": "https://example.com/images/coverphoto.jpg",
+        "PostsId": ["post1", "post2", "post3"],
+        "PersonalLibraryInfo": [
+          {
+            "category": "Science Fiction",
+            "bookinfo" : [
+              {
+                "BookId": "book4",
+                "BookName": "Dune",
+                "myrating": 8,
+                "BookImage": "https://example.com/images/foundation.jpg"
+              },
+              {
+                "BookId": "book5",
+                "BookName": "OWO",
+                "myrating": 7,
+                "BookImage": "https://example.com/images/hitchhiker.jpg"
+              }
+            ]
+          },
+          {
+            "category": "Fantasy",
+            "bookinfo" : [
+              {
+                "BookId": "book6",
+                "BookName": "Harry Potter and the Sorcerer's Stone",
+                "myrating": 9,
+                "BookImage": "https://example.com/images/harrypotter.jpg"
+              },
+              {
+                "BookId": "book7",
+                "BookName": "The Hobbit",
+                "myrating": 8,
+                "BookImage": "https://example.com/images/hobbit.jpg"
+              }
+            ]
+          },
+          {
+            "category": "Mystery",
+            "bookinfo" : [
+              {
+                "BookId": "book8",
+                "BookName": "The Da Vinci Code",
+                "myrating": 8,
+                "BookImage": "https://example.com/images/davinci.jpg"
+              }
+            ]
+          }
+        ],
+        "Favourites": ["post1", "book2"],
+        "cart": [],
+        "usertype": "general user",
+        "LoyaltyPoints": 1200,
+        "SubscriptionEndDate": "2024-12-31"
+    },
+    {
+        "Name": "Jack Smith",
+        "Email": "jack@example.com",
+        "Profileimgurl": "https://example.com/profile/jack",
+        "Coverimgurl": "https://example.com/images/coverphoto.jpg",
+        "PostsId": ["post4", "post5", "post6"],
+        "PersonalLibraryInfo": [
+          {
+            "category": "Science Fiction",
+            "bookinfo" : [
+              {
+                "BookId": "book4",
+                "BookName": "Foundation",
+                "myrating": 8,
+                "BookImage": "https://example.com/images/foundation.jpg"
+              },
+              {
+                "BookId": "book5",
+                "BookName": "The Hitchhiker's Guide to the Galaxy",
+                "myrating": 7,
+                "BookImage": "https://example.com/images/hitchhiker.jpg"
+              }
+            ]
+          },
+          {
+            "category": "Fantasy",
+            "bookinfo" : [
+              {
+                "BookId": "book6",
+                "BookName": "Harry Potter and the Sorcerer's Stone",
+                "myrating": 9,
+                "BookImage": "https://example.com/images/harrypotter.jpg"
+              },
+              {
+                "BookId": "book7",
+                "BookName": "The Hobbit",
+                "myrating": 8,
+                "BookImage": "https://example.com/images/hobbit.jpg"
+              }
+            ]
+          }
+        ],
+        "Favourites": ["post4", "book2"],
+        "cart": [],
+        "Role": "general user",
+        "LoyaltyPoints": 1500,
+        "SubscriptionEndDate": "2024-12-31"
+    }
+
+]
