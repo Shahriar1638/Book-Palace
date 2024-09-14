@@ -12,6 +12,7 @@ import PostMenu from "../Pages/Forums/Load Post/PostMenu";
 import CreatePost from "../Pages/Forums/Create Posts/CreatePost";
 import MyPendingBooks from "../Pages/AuthorDashBoard/MyPendingBooksStatus/MyPendingBooks";
 import PublishBoook from "../Pages/AuthorDashBoard/PublishBook/PublishBoook";
+import Others from "../Pages/AuthorDashBoard/Others/Others";
 
 const routes = createBrowserRouter([
     {
@@ -65,7 +66,7 @@ const routes = createBrowserRouter([
         // Author routes
         {
           path: "/dashboard/authorhome",
-          element: <PendingBooks />,
+          element: <Others />,
         },
         {
           path: "/dashboard/bookpublish",
@@ -77,7 +78,7 @@ const routes = createBrowserRouter([
         },
         {
           path: "/dashboard/mypublishedbooks",
-          element: <PendingBooks />,
+          element: <Others />,
         }
       ]
     }

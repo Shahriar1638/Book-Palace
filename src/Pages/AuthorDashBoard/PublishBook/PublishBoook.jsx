@@ -19,13 +19,13 @@ const PublishBoook = () => {
         const authorName = userInfos.name;
         const authorID = userInfos._id;
         const status = 'pending';
-        const publishedYear = moment().format('YYYY');
+        const publishYear = moment().format('YYYY');
         const rating = 0;
         const data = {
             bookTitle,
             bookImage,
             genre,
-            publishedYear,
+            publishYear,
             ISBN,
             price,
             rating,
