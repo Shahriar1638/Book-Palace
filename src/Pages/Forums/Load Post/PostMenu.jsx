@@ -26,7 +26,7 @@ const PostMenu = () => {
     const navigate = useNavigate(); 
 
     useEffect(() => {
-        fetch('http://localhost:3000/24141236/allposts')
+        fetch('https://book-palace-server.vercel.app/24141236/allposts')
             .then(res => res.json())
             .then(data => setPostCollections(data))
             .catch(error => console.error('Error fetching posts:', error));
